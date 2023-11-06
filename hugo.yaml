@@ -18,13 +18,13 @@ markup:
 
 menu:
   main:
-    - name: Docs
+    - name: Projects
       pageRef: /docs
       weight: 1
-    - name: About
+    - name: Members
       pageRef: /about
       weight: 2
-    - name: Contact ↗
+    - name: Contact Us
       url: "https://github.com/project-555"
       weight: 3
     - name: Search

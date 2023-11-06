@@ -9,10 +9,10 @@ toc: false
 ## 알아보기
 
 {{< cards >}}
-  {{< card link="docs" title="Docs" icon="book-open" >}}
+  {{< card link="docs" title="Projects" icon="server" >}}
   {{< card link="about" title="Members" icon="user" >}}
 {{< /cards >}}
 
 ## Visit Github
 
-For more information, visit [Github](https://github.com/project-555/project-555).
+For more information, visit [Project 555's Github](https://github.com/project-555)

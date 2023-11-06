@@ -36,7 +36,7 @@ Plog를 구현하면서 사용한 기술 스택은 다음과 같습니다.
 #### CI/CD
 - [Github Action](https://docs.github.com/ko/actions)
 
-
+---
 # Study
 ![image](./asset/images/_index-1699279733409.png)
 
