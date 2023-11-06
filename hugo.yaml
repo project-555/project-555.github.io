@@ -49,3 +49,7 @@ params:
   editURL:
     enable: true
     base: "https://github.com/project-555/project-555.github.io/edit/main/content"
+
+  assets:
+    disableFingerprinting: true
+
