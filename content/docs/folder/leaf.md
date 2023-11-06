@@ -5,3 +5,9 @@ prev: docs/folder/
 ---
 
 This page is under a folder.
+
+```go
+func main() {
+    fmt.Println("Hello World")
+}
+```
