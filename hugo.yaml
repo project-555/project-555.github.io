@@ -38,6 +38,10 @@ menu:
         icon: github
 
 params:
+  search:
+    enable: true
+    type: flexsearch
+
   navbar:
     displayTitle: true
     displayLogo: false

@@ -1,18 +1,29 @@
 ---
-title: Documentation
-next: first-page
+title: Project 555
+date: 2023-11-06T21:26:48+09:00
+next: docs/plog-study/
 ---
+[Project 555](https://github.com/project-555)는 팀 멤버인 양태영, 양수영, 신소진의 앞 글자의 획수를 따서 작명되었습니다.
 
-This is a demo of the theme's documentation layout.
+개발자로써 성장을 위해, 배움에 그치지 않고, 서비스를 직접 만들며 경험하기 위해 해당 프로젝트가 기획되었습니다.
 
-## Hello, World!
+# Plog란?
+Plog는 블로그 서비스로 개발자들의 블로그 서비스를 위해 기획되었으며, 개발자들의 구직 및 이직에 대한 기회를 열고, 간편하게 자신의 커리어를 관리하기 위해 다음과 같은 기능을 포괄하기 위해 프로젝트가 시작되었습니다.
 
-```go {filename="main.go"}
-package main
+- [x] 개발자 블로그 서비스
+- [ ] 개발자 포트폴리오 서비스
+- [ ] 개발자 Github 프로필 서비스
 
-import "fmt"
+실제 개발된 부분은 프로젝트 기간 및 시간관계상 블로그 서비스만 개발되었습니다.
 
-func main() {
-    fmt.Println("Hello, World!")
-}
-```
+# 프로젝트 여정
+
+프로젝트는 3가지 단계의 스탭을 통해 진행되었으며, 각 스탭은 다음과 같습니다.
+![image](./asset/images/_index-1699275499874.png)
+
+# 문서화
+이후 문서화는 다음과 같이 진행됩니다.
+
+- [프로젝트 시작 전! 우리가 공부한 내용 알아보기](/docs/plog-study/)
+- [백엔드에 대해 알아보기](/docs/plog-back/)
+- [프론트엔드에 대해 알아보기](/docs/plog-front/)

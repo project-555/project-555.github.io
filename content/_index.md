@@ -10,7 +10,7 @@ toc: false
 
 {{< cards >}}
   {{< card link="docs" title="Docs" icon="book-open" >}}
-  {{< card link="about" title="About" icon="user" >}}
+  {{< card link="about" title="Members" icon="user" >}}
 {{< /cards >}}
 
 ## Visit Github
