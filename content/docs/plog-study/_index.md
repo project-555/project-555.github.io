@@ -1,8 +1,46 @@
 ---
 title: Research & Study
 date: 2023-11-06T21:26:48+09:00
+toc: true
+prev: docs/
+next: docs/plog-back/
 ---
-Plog의 첫 기술조사에 필요한 지식은 다음과 같이 정하였고, 해당 지식을 습득하고 팀원들과 구성하기 위해 Github Repository([plog-study](https://github.com/project-555/plog-study))를 통해 공유하였습니다.
+해당 페이지에서는 Plog를 구현하기 위한 기술 스택 정의 및 초기 기술 조사 시점에서 진행한 스터디 목록을 명세합니다.
+
+# Stacks
+Plog를 구현하면서 사용한 기술 스택은 다음과 같습니다.
+
+## Frontend
+#### Frontend Framework
+- [ReactJS](https://ko.legacy.reactjs.org/)
+#### UI Framework
+- [Material UI](https://mui.com/)
+#### Markdown Editor
+- [Toast UI Editor](https://ui.toast.com/)
+
+## Backend
+#### Backend Framework
+  - [Spring](https://spring.io/)
+
+#### Authentication & Security
+  - [Spring Security](https://spring.io/projects/spring-security)
+
+#### Databases
+- [PostgreSQL](https://www.postgresql.org/) ([AWS RDS](https://aws.amazon.com/ko/rds/))
+- [Redis](https://redis.io/) ([AWS ElasticCache](https://aws.amazon.com/ko/elasticache/))
+
+#### Container & Orchestration
+- [Docker](https://www.docker.com/)
+- [AWS ECS](https://aws.amazon.com/ko/ecs/)
+
+#### CI/CD
+- [Github Action](https://docs.github.com/ko/actions)
+
+
+# Study
+![image](./asset/images/_index-1699279733409.png)
+
+Plog의 첫 기술조사 후 구성원들이 잘 모르는 기술을 공부하고 해당 기록을 Github Repository([plog-study](https://github.com/project-555/plog-study))에 문서화하였습니다.
 
 ## Frontend
 - [Vue.js](https://github.com/project-555/plog-study/tree/main/vue.js)
