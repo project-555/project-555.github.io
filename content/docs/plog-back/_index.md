@@ -9,7 +9,8 @@ toc: true
 
 ## Backend Architecture Overview
 
-![img.png](../asset/images/img.png)
+![image](./asset/images/_index-1699643793726.png)
+
 
 전체적인 구성은 위의 구성을 따릅니다
 
