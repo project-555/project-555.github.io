@@ -13,6 +13,7 @@ type: about
 {{< cards >}}
 {{< card link="https://github.com/YangTaeyoung" title="Github" icon="user" >}}
 {{< card link="https://yangtaeyoung.github.io" title="기술 블로그" icon="home" >}}
+{{< card link="mailto:0130yang@gmail.com" title="이메일" icon="mail" >}}
 {{< /cards >}}
 
 ### Role in Project 555
@@ -53,4 +54,4 @@ type: about
 #### 문서화 파트
 - Hugo를 통해 해당 블로그를 Github Pages를 활용하여 배포하였습니다.
 - [_"Plog Back"_](/docs/plog-back/) 문서를 작성하였습니다.
-- [_"Plog의 백엔드 서버 배포 시퀀스 읽어보기"_](/plog-back/backend_deploy_sequence/) 문서를 작성하였습니다.
+- [_"Plog의 백엔드 서버 배포 시퀀스 읽어보기"_](/docs/plog-back/backend_deploy_sequence/) 문서를 작성하였습니다.
