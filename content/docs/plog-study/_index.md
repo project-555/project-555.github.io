@@ -7,10 +7,10 @@ next: docs/plog-back/
 ---
 해당 페이지에서는 Plog를 구현하기 위한 기술 스택 정의 및 초기 기술 조사 시점에서 진행한 스터디 목록을 명세합니다.
 
-# Stacks
+## Stacks
 Plog를 구현하면서 사용한 기술 스택은 다음과 같습니다.
 
-## Frontend
+### Frontend
 #### Frontend Framework
 - [ReactJS](https://ko.legacy.reactjs.org/)
 #### UI Framework
@@ -18,7 +18,7 @@ Plog를 구현하면서 사용한 기술 스택은 다음과 같습니다.
 #### Markdown Editor
 - [Toast UI Editor](https://ui.toast.com/)
 
-## Backend
+### Backend
 #### Backend Framework
   - [Spring](https://spring.io/)
 
@@ -37,12 +37,12 @@ Plog를 구현하면서 사용한 기술 스택은 다음과 같습니다.
 - [Github Action](https://docs.github.com/ko/actions)
 
 
-# Study
+## Study
 ![image](./asset/images/_index-1699279733409.png)
 
 Plog의 첫 기술조사 후 구성원들이 잘 모르는 기술을 공부하고 해당 기록을 Github Repository([plog-study](https://github.com/project-555/plog-study))에 문서화하였습니다.
 
-## Frontend
+### Frontend
 - [Vue.js](https://github.com/project-555/plog-study/tree/main/vue.js)
   - [Vue 구동하기](https://github.com/project-555/plog-study/blob/main/vue.js/01.start-with-vue.md)
   - [SFC](https://github.com/project-555/plog-study/blob/main/vue.js/02.SFC.md)
@@ -50,7 +50,8 @@ Plog의 첫 기술조사 후 구성원들이 잘 모르는 기술을 공부하�
   - [Vue 기본 개념](https://github.com/project-555/plog-study/blob/main/vue.js/04.vue-overview.md)
   - [Vue 기본 문법](https://github.com/project-555/plog-study/blob/main/vue.js/05.vue-syntax.md)
   - [Vue 상태관리 패턴](https://github.com/project-555/plog-study/blob/main/vue.js/06.state-management-pattern.md)
-## Backend
+
+### Backend
 - [Spring](https://github.com/project-555/plog-study/tree/main/spring)
   - [Spring 개요](https://github.com/project-555/plog-study/blob/main/spring/01.what-is-spring.md)
   - [웹 개발 개론](https://github.com/project-555/plog-study/blob/main/spring/02.web.md)
