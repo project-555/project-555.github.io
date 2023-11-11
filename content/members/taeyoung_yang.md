@@ -11,10 +11,11 @@ type: about
 
 현직 2년차 백엔드 엔지니어로 주식회사 룩코에서 재직 중입니다.
 
+### About Me
 {{< cards >}}
 {{< card link="https://github.com/YangTaeyoung" title="Github" icon="user" >}}
 {{< card link="https://yangtaeyoung.github.io" title="기술 블로그" icon="home" >}}
-{{< card link="mailto:0130yang@gmail.com" title="이메일" icon="mail" >}}
+{{< card link="mailto:0130yang@gmail.com" title="이메일 보내기" icon="mail" >}}
 {{< /cards >}}
 
 ### Role in Project 555
