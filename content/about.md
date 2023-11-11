@@ -8,11 +8,11 @@ type: about
     {{< card link="/" title="Sojin Shin" image="https://source.unsplash.com/featured/800x600?landscape" subtitle="Image under assets directory, processed by Hugo." method="Resize" options="600x q80 webp" >}}
 {{< /cards >}}
 
-### Taeyoung Yang
+## Taeyoung Yang
 현직 2년차 백엔드 엔지니어로 주식회사 룩코에서 재직 중입니다.
 {{< cards >}}
 {{< card link="https://github.com/YangTaeyoung" title="Github" icon="user" >}}
-{{< card link="https://yangtaeyoung.github.io" title="기술 블로그" icon="server" >}}
+{{< card link="https://yangtaeyoung.github.io" title="기술 블로그" icon="home" >}}
 {{< /cards >}}
 
 ### Role in Project 555
