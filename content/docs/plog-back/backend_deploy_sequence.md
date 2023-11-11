@@ -88,7 +88,7 @@ Dockerfile은 Docker 이미지를 빌드하기 위한 설정 파일입니다.
 
 저희는 Spring을 사용하여 구성하였기에 지금 현재 저희가 사용하고 있던 Java 및 Gradle 버전에 맞추어 Dockerfile을 구성하였습니다.
 
-```dockerfile
+```dockerfile {filename="/Dockerfile"}
 # Gradle을 기반으로 하는 Java 프로젝트를 빌드하는 단계
 FROM gradle:7.5-jdk18 AS build
 WORKDIR /workspace/app
@@ -127,12 +127,12 @@ Plog 백엔드 서버를 배포하기 위한 워크플로우는 다음과 같이
 ### Sequence
 - Build Job
   1. Checkout
-        ```yaml
+        ```yaml {filename="/.github/workflows/deploy-dev.yaml"}
         - name: Checkout
           uses: actions/checkout@v2
         ```
   2. AWS CLI 로그인
-        ```yaml
+        ```yaml {filename="/.github/workflows/deploy-dev.yaml"}
         - name: Set up AWS credentials
           uses: aws-actions/configure-aws-credentials@v1
           with:
@@ -141,7 +141,7 @@ Plog 백엔드 서버를 배포하기 위한 워크플로우는 다음과 같이
             aws-region: ap-northeast-2
         ```
   3. AWS Secrets Manager에서 Config 파일(`application.yaml`, `application-dev.yaml`) 가져오기
-        ```yaml
+        ```yaml {filename="/.github/workflows/deploy-dev.yaml"}
         - name: Make Directory
           run: |
             mkdir -p src/main/resources
@@ -155,7 +155,7 @@ Plog 백엔드 서버를 배포하기 위한 워크플로우는 다음과 같이
             echo "$SECRET" > src/main/resources/application-dev.yaml
         ```
   4. Docker Build and Push to ECR
-        ```yaml
+        ```yaml {filename="/.github/workflows/deploy-dev.yaml"}
         - name: Build, tag, and push image to Amazon ECR
           env:
             ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
@@ -167,7 +167,7 @@ Plog 백엔드 서버를 배포하기 위한 워크플로우는 다음과 같이
         ```
 - Deploy Job
   1. AWS CLI 로그인
-      ```yaml
+      ```yaml {filename="/.github/workflows/deploy-dev.yaml"}
       - name: Set up AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -176,13 +176,13 @@ Plog 백엔드 서버를 배포하기 위한 워크플로우는 다음과 같이
            aws-region: ap-northeast-2
       ```
   2. AWS ECS에서 이전 Task Definition 가져오기
-      ```yaml
+      ```yaml {filename="/.github/workflows/deploy-dev.yaml"}
       - name: Download Task Definition
         run: |
           aws ecs describe-task-definition --task-definition ${{ env.ECS_TASK }} --query "taskDefinition" > current-task-def.json
      ```
   3. 새로운 Task Definition에 새로운 이미지 경로 등록
-     ```yaml
+     ```yaml {filename="/.github/workflows/deploy-dev.yaml"}
      - name: Fill in the new image ID in the Amazon ECS task definition
        id: task-def
        uses: aws-actions/amazon-ecs-render-task-definition@v1
@@ -194,7 +194,7 @@ Plog 백엔드 서버를 배포하기 위한 워크플로우는 다음과 같이
             SPRING_PROFILES_ACTIVE=${{ env.ENVIRONMENT }}
      ```
   4. 새로운 Task Definition을 사용하여 서비스 업데이트
-     ```yaml
+     ```yaml {filename="/.github/workflows/deploy-dev.yaml"}
      - name: Deploy Amazon ECS task definition
        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
        with:
