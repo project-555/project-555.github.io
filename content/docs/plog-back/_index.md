@@ -4,18 +4,15 @@ date: 2023-11-06T21:26:48+09:00
 type: docs
 toc: true
 ---
-# Hello Backend For Plog 👋
-해당 부분은 Plog의 백엔드를 구성하는 각 요소 및 개발에 대한 내용을 담고 있습니다.
+해당 페이지에서는 Plog의 백엔드를 구성하는 각 요소 및 개발에 대한 내용을 간략하게 담고 있습니다.
 
 ## Backend Architecture Overview
+전체적인 plog의 백엔드 아키텍처는 아래 구성을 따릅니다
 
 ![image](./asset/images/_index-1699644290358.png)
 
-
-전체적인 구성은 위의 구성을 따릅니다
-
 ### plog-back
-- plog의 백엔드 소스 코드를 저장하는 github 저장소입니다.
+- plog의 [백엔드 소스 코드를 저장하는 github 저장소](https://github.com/project-555/plog-back)입니다.
 - 인증은 [Spring Security](https://spring.io/projects/spring-security/)를 사용하여 구현하였으며, [JWT](https://jwt.io/)를 사용하여 구현하였습니다.
   - 좀 더 자세히 알고 싶으시다면 [_"Plog의 인증은 어떻게 구현되었을까?"_](#) 문서를 참고 부탁드립니다.
 - 3가지의 대표적인 레이어로 구성되어 있으며, Controller, Service, Repository Layer로 구성되어 있습니다.
@@ -33,7 +30,7 @@ toc: true
 ### plog-api
 - Spring을 사용하여 배포된 ECS 테스크, 서비스명 입니다.
 - API 서버는 AWS ECS를 통해 배포되며, AWS RDS와 AWS ElasticCache를 통해 데이터베이스를 관리하는 형태로 구성되었습니다.
-- 배포에 대해 좀 더 자세히 알고 싶다면 ["_Plog의 백엔드 서버 배포 시퀀스 읽어보기_"](#) 문서를 참고 부탁드립니다.
+- 배포에 대해 좀 더 자세히 알고 싶다면 ["_Plog의 백엔드 서버 배포 시퀀스 읽어보기_"](/docs/plog-back/backend_deploy_sequence/) 문서를 참고 부탁드립니다.
 
 ### plog-file-bucket
 - AWS S3에 위치한 파일 저장소입니다.
