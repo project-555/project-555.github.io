@@ -1,3 +1,10 @@
+---
+title: "Plog의 Repository Test 도입을 위한 힘겨운 여정"
+date: 2023-11-11T17:37:48+09:00
+type: docs
+toc: true
+prev: docs/plog-back/
+---
 # Testing
 
 ## 테스트를 하게 된 이유

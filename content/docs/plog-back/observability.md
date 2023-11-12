@@ -1,3 +1,11 @@
+---
+title: "Plog가 로깅을 시작한 이유"
+date: 2023-11-11T17:37:48+09:00
+type: docs
+toc: true
+prev: docs/plog-back/
+---
+
 # Observability
 
 ## 로깅을 하게 된 이유

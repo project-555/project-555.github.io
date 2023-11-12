@@ -20,9 +20,9 @@ toc: true
 - 데이터베이스는 PostgreSQL을 사용하였으며, [Sprint Data JPA](https://spring.io/projects/spring-data-jpa/), [QueryDSL](http://querydsl.com/)을 사용하여 구현하였습니다.
    - 좀 더 자세히 알고 싶으시다면 [_"Plog의 데이터베이스와 서버의 연결 구성 살펴보기"_](#) 문서를 참고 부탁드립니다.
 - Spring을 사용하여 구현되었으며, 각 레이어 별로 에러 추적을 위해 로깅 AOP, Filter를 구현하였습니다.
-   - 좀 더 자세히 알고 싶으시다면 [_"Plog가 로깅을 시작한 이유"_](#) 문서를 참고 부탁드립니다.
+   - 좀 더 자세히 알고 싶으시다면 [_"Plog가 로깅을 시작한 이유"_](/docs/plog-back/observability/) 문서를 참고 부탁드립니다.
 - 테스트 코드는 JUnit5를 사용하여 구현하였고 Service Layer, QueryDSL을 사용한 Repository Layer가 문서화되었습니다.
-   - Repository Test에 대해 궁금하다면 [_"Plog의 Repository Test 도입을 위한 힘겨운 여정"_](#) 문서를 참고 부탁드립니다.
+   - Repository Test에 대해 궁금하다면 [_"Plog의 Repository Test 도입을 위한 힘겨운 여정"_](/docs/plog-back/testing/) 문서를 참고 부탁드립니다.
    - Service Test에 대해 궁금하다면 [_"Plog의 Service Test에 도달하기 위한 한 발자국"_](#) 문서를 참고 부탁드립니다.
 - Github Pull Request에서 테스트 커버리지를 확인할 수 있도록 액션도 설정하여 팀원 간에 본인의 코드에 테스트 코드가 얼마나 작성되었는지 가시적으로 확인할 수 있도록 하였습니다.
    - 좀 더 자세히 알고 싶으시다면 [_"Spring 테스트 커버리지, 모두 볼 수 있도록 리포트를 공유해보자"_](#) 문서를 참고 부탁드립니다.
