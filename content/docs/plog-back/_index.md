@@ -25,7 +25,7 @@ toc: true
    - Repository Test에 대해 궁금하다면 [_"Plog의 Repository Test 도입을 위한 힘겨운 여정"_](/docs/plog-back/testing/) 문서를 참고 부탁드립니다.
    - Service Test에 대해 궁금하다면 [_"Plog의 Service Test에 도달하기 위한 한 발자국"_](#) 문서를 참고 부탁드립니다.
 - Github Pull Request에서 테스트 커버리지를 확인할 수 있도록 액션도 설정하여 팀원 간에 본인의 코드에 테스트 코드가 얼마나 작성되었는지 가시적으로 확인할 수 있도록 하였습니다.
-   - 좀 더 자세히 알고 싶으시다면 [_"Spring 테스트 커버리지, 모두 볼 수 있도록 리포트를 공유해보자"_](#) 문서를 참고 부탁드립니다.
+   - 좀 더 자세히 알고 싶으시다면 [_"Spring 테스트 커버리지, 모두 볼 수 있도록 리포트를 공유해보자"_](/docs/plog-back/testing_report/) 문서를 참고 부탁드립니다.
 
 ### plog-api
 - Spring을 사용하여 배포된 ECS 테스크, 서비스명 입니다.
