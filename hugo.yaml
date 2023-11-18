@@ -61,3 +61,6 @@ params:
     # full (100%), wide (90rem), normal (1280px)
     width: wide
 
+sitemap:
+  changeFreq: daily
+enableRobotsTXT: true
