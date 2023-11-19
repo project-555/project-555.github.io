@@ -5,9 +5,9 @@ type: docs
 toc: true
 prev: docs/plog-back/
 ---
+![image](./asset/images/giphy.gif)
 
 ## 파일 업로드가 Plog에 왜 필요했을까?
-![image](./asset/images/giphy.gif)
 
 파일 업로드는 Plog에서 관리하는 프로필 사진, 포스팅 썸네일 뿐만 아니라 마크다운 내 삽입되는 이미지, 드래그 앤 드랍으로 삽입되는 이미지  등을 업로드 시키기 위해 필요했었습니다.
 
