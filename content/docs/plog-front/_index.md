@@ -6,7 +6,6 @@ toc: true
 next: docs/plog-front/frontend_tech_stack
 ---
 
-# Hello Frontend For Plog 👋
 해당 부분은 Plog의 프론트엔드를 구성하는 각 요소 및 개발에 대한 내용을 담고 있습니다.
 
 ## Stacks
@@ -23,7 +22,6 @@ next: docs/plog-front/frontend_tech_stack
 #### Development
 <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" style="display:inline;">
 <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white" style="display:inline;">
-<img src="https://img.shields.io/badge/mui-007FFF?style=for-the-badge&logo=mui&logoColor=white" style="display:inline;">
 <img src="https://img.shields.io/badge/mui-007FFF?style=for-the-badge&logo=mui&logoColor=white" style="display:inline;">
 <img src="https://img.shields.io/badge/axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white" style="display:inline;">
 
