@@ -14,7 +14,7 @@ toc: true
 ### plog-back
 - plog의 [백엔드 소스 코드를 저장하는 github 저장소](https://github.com/project-555/plog-back)입니다.
 - 인증은 [Spring Security](https://spring.io/projects/spring-security/)를 사용하여 구현하였으며, [JWT](https://jwt.io/)를 사용하여 구현하였습니다.
-  - 좀 더 자세히 알고 싶으시다면 [_"Plog의 인증은 어떻게 구현되었을까?"_](#) 문서를 참고 부탁드립니다.
+  - 좀 더 자세히 알고 싶으시다면 [_"Plog의 인증은 어떻게 구현되었을까?"_](/docs/plog-back/authorization/) 문서를 참고 부탁드립니다.
 - 3가지의 대표적인 레이어로 구성되어 있으며, Controller, Service, Repository Layer로 구성되어 있습니다.
   - 좀 더 자세히 알고 싶으시다면 [_"Plog의 뼈대, Layered Architecture"_](#) 문서를 참고 부탁드립니다.
 - 데이터베이스는 PostgreSQL을 사용하였으며, [Sprint Data JPA](https://spring.io/projects/spring-data-jpa/), [QueryDSL](http://querydsl.com/)을 사용하여 구현하였습니다.
