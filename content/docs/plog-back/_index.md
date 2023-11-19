@@ -35,7 +35,7 @@ toc: true
 ### plog-file-bucket
 - AWS S3에 위치한 파일 저장소입니다.
 - 블로그에 업로드 되는 파일, 사진 등은 해당 저장소에 저장되며, 업로드 시 Pre-Signed URL을 통해 업로드가 진행됩니다.
-- Plog에서 구현한 파일 업로드에 좀 더 자세히 알고 싶다면 [_"S3 Pre-signed URL로 구현한 파일 업로드 읽어보기"_](#) 문서를 참고 부탁드립니다.
+- Plog에서 구현한 파일 업로드에 좀 더 자세히 알고 싶다면 [_"S3 Pre-signed URL로 구현한 파일 업로드 읽어보기"_](/docs/plog-back/file_upload_with_s3/) 문서를 참고 부탁드립니다.
 
 ### plog-postgres
 - AWS RDS에 위치한 PostgreSQL 데이터베이스입니다.
