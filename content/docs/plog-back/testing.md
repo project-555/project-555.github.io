@@ -1,3 +1,11 @@
+---
+title: "Plog의 Repository Test 도입을 위한 힘겨운 여정"
+date: 2023-11-11T17:37:48+09:00
+type: docs
+toc: true
+prev: docs/plog-back/
+---
+
 ## 테스트를 하게 된 이유
 
 일부 API에서는 복잡한 쿼리나 다이나믹한 쿼리를 사용하기 위해 `JPA`가 아닌 `Querydsl`을 사용하게 되었습니다.
