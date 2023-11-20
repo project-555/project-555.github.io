@@ -40,7 +40,7 @@ toc: true
 ### plog-postgres
 - AWS RDS에 위치한 PostgreSQL 데이터베이스입니다.
 - Plog에서 사용되는 모든 데이터는 해당 데이터베이스에 저장됩니다.
-- Plog에서 구현한 데이터베이스에 좀 더 자세히 알고 싶다면 [_"Project-555가 PostgreSQL를 사용하게 된 사연"_](#) 문서를 참고 부탁드립니다.
+- Plog에서 구현한 데이터베이스에 좀 더 자세히 알고 싶다면 [_"Project-555가 PostgreSQL를 사용하게 된 사연"_](/docs/plog-back/postgres/) 문서를 참고 부탁드립니다.
 
 ### plog-redis
 - AWS ElasticCache에 위치한 Redis 데이터베이스입니다.
