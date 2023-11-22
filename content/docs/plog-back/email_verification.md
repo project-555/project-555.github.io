@@ -66,7 +66,7 @@ Spring 서버에서 메일을 보내는 방법 중 하나로 [Java Mail Sender](
 
 ## 이메일 인증메일 전송 로직 구현
 이메일 인증 메일 전송 로직은 아래와 같은 시퀀스로 이루어집니다. (컨트롤러는 주요 비즈니스 로직이 아니므로 생략하였습니다.)
-![image](./asset/images/email_verification-1700668972444.png)
+![image](./asset/images/email_verification-1700670095307.png)
 
 핵심 비즈니스 로직인 `sendVerifyJoinEmail()`메서드는 다음과 같습니다.
 ```java
