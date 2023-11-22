@@ -2,6 +2,7 @@
 title: Project 555
 date: 2023-11-06T21:26:48+09:00
 next: docs/plog-study/
+prev: /
 ---
 [Project 555](https://github.com/project-555)는 팀 멤버인 양태영, 양수영, 신소진의 앞 글자의 획수를 따서 작명되었습니다.
 

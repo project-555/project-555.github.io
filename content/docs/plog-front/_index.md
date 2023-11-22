@@ -3,7 +3,9 @@ title: "Plog Front"
 date: 2023-11-06T21:26:48+09:00
 type: docs
 toc: true
-next: docs/plog-front/frontend_tech_stack
+next: docs/convention
+prev: docs/plog-back
+weight: 3
 ---
 
 해당 부분은 Plog의 프론트엔드를 구성하는 각 요소 및 개발에 대한 내용을 담고 있습니다.

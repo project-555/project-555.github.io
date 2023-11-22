@@ -3,6 +3,9 @@ title: "Plog Back"
 date: 2023-11-06T21:26:48+09:00
 type: docs
 toc: true
+next: docs/plog-front
+prev: docs/plog-study
+weight: 2
 ---
 해당 페이지에서는 Plog의 백엔드를 구성하는 각 요소 및 개발에 대한 내용을 간략하게 담고 있습니다.
 

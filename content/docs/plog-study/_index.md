@@ -4,6 +4,7 @@ date: 2023-11-06T21:26:48+09:00
 toc: true
 prev: docs/
 next: docs/plog-back/
+weight: 1
 ---
 해당 페이지에서는 Plog를 구현하기 위한 기술 스택 정의 및 초기 기술 조사 시점에서 진행한 스터디 목록을 명세합니다.
 
