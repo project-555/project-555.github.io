@@ -37,26 +37,30 @@ Redis는 메모리 기반의 Key-Value 구조의 비관계형 데이터베이스
 간편하게 Map 형태로 데이터를 저장할 수 있고, 데이터를 저장하고 조회하는데 빠른 속도를 보장합니다.
 API 캐시,  세션 캐시, 메시지 브로커 등 다양한 용도로 사용할 수 있지만, Plog에서는 이메일 인증 위한 토큰 및 이메일 인증 코드를 저장하기 위해 사용하였습니다.
 
+### RDB로 상상해보기
 기존에 PostgreSQL을 사용하고 있었기에, PostgreSQL에도 이메일 인증 코드를 저장할 수 있었지만, Redis를 사용하는 이유는 다음과 같습니다.
-이메일 인증 코드는 영원히 유효한 상태이면 안됩니다. 해당 방식을 구현하기 위해서는 RDB에서는 다음 형태로 데이터를 쌓을 수 있습니다. 
 
-```sql
-CREATE TABLE email_verification (
-    id SERIAL PRIMARY KEY,
-    email VARCHAR(255) NOT NULL,
-    code VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    expired_at TIMESTAMP NOT NULL
-);
-```
+- 이메일 인증 코드는 영원히 유효한 상태이면 안됩니다. 해당 요구사항을 충족하며 구현하기 위한 첫번째 방법으로는 기존에 사용하는 RDB, PostgreSQL을 활용하는 것이었습니다. 
+- PostgreSQL에서는 다음 형태로 데이터를 쌓음으로써 만료 기능을 구현할 수 있습니다.
+    ```sql
+    CREATE TABLE email_verification (
+        id SERIAL PRIMARY KEY,
+        email VARCHAR(255) NOT NULL,
+        code VARCHAR(255) NOT NULL,
+        created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        expired_at TIMESTAMP NOT NULL
+    );
+    ```
+- 다만  이런 형태의 경우 조회 시마다 `expired_at`을 비교하여 유효한지 확인해야 합니다.
+- 이는 조회 시마다 `expired_at`을 비교하고, 만료를 위해 기존 데이터를 삭제하는 로직이 필요하며, 이는 성능적으로나 코드의 복잡도 측면에서 좋지 않습니다.
 
-다만  이런 형태의 경우 조회 시마다 `expired_at`을 비교하여 유효한지 확인해야 합니다. 
+### Redis로의 결정
+![image](./asset/images/email_verification-1700673696932.png)
 
-이는 조회 시마다 `expired_at`을 비교하고, 만료를 위해 기존 데이터를 삭제하는 로직이 필요하며, 이는 성능적으로나 코드의 복잡도 측면에서 좋지 않습니다.
-
-반면 Redis의 경우 자체적으로 만료 기능을 제공하고 있습니다. 이를 통해 만료 기능을 사용하면, 만료 기능을 위한 로직을 구현할 필요가 없습니다.
-
-개발자는 해당 이메일에 대한 인증 코드가 있는지에 따른 조회만으로도 이메일 인증에 대한 부분을 손쉽게 구현할 수 있습니다.
+아래의 3가지 이유로 Redis를 사용하기로 결정하였습니다.
+1. Redis의 경우 자체적으로 레코드의 만료 기능을 제공하고 있습니다.
+2. 만료 기능을 사용하면, 개발자가 설정한 시간이 지나면 저절로 레코드가 소멸하기에 인증 코드를 소멸시키거나 유효성을 확인하기 위한 별다른 위한 로직을 구현할 필요가 없습니다.
+3. 개발자는 해당 이메일에 대한 인증 코드가 있는지에 따른 조회만으로도 이메일 인증에 대한 부분을 손쉽게 구현할 수 있습니다.
 
 
 ## 메일을 어떻게 보낼까?
