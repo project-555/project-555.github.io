@@ -60,6 +60,7 @@ type: about
 - [_"Plog의 인증은 어떻게 구현되었을까?"_](/docs/plog-back/authorization/) 문서를 작성하였습니다.
 - [_"S3 Pre-signed URL로 구현한 파일 업로드 읽어보기"_](/docs/plog-back/file_upload_with_s3/) 문서를 작성하였습니다.
 - [_"Spring 테스트 커버리지, 모두 볼 수 있도록 리포트를 공유해보자"_](/docs/plog-back/testing_report/) 문서를 작성하였습니다.
+- [_"Plog의 이메일 인증 Redis와 함께 이렇게 구현했습니다!"_](/docs/plog-back/email_verification) 문서를 작성하였습니다.
 - [_"Convention"_](/docs/convention/) 문서를 작성하였습니다.
 - [_"Scrum Convention"_](/docs/convention/scrum_convention/) 문서를 작성하였습니다.
 - [_"Study Convention"_](/docs/convention/study_convention/) 문서를 작성하였습니다.
