@@ -21,7 +21,7 @@ weight: 2
 - 3가지의 대표적인 레이어로 구성되어 있으며, Controller, Service, Repository Layer로 구성되어 있습니다.
   - 좀 더 자세히 알고 싶으시다면 [_"Plog의 뼈대, Layered Architecture"_](#) 문서를 참고 부탁드립니다.
 - 데이터베이스는 PostgreSQL을 사용하였으며, [Sprint Data JPA](https://spring.io/projects/spring-data-jpa/), [QueryDSL](http://querydsl.com/)을 사용하여 구현하였습니다.
-   - 좀 더 자세히 알고 싶으시다면 [_"Plog의 데이터베이스와 서버의 연결 구성 살펴보기"_](#) 문서를 참고 부탁드립니다.
+   - 좀 더 자세히 알고 싶으시다면 [_"Plog의 데이터베이스와 서버의 연결 구성 살펴보기"_](/docs/plog-back/db_server_design/) 문서를 참고 부탁드립니다.
 - Spring을 사용하여 구현되었으며, 각 레이어 별로 에러 추적을 위해 로깅 AOP, Filter를 구현하였습니다.
    - 좀 더 자세히 알고 싶으시다면 [_"Plog가 로깅을 시작한 이유"_](/docs/plog-back/observability/) 문서를 참고 부탁드립니다.
 - 테스트 코드는 JUnit5를 사용하여 구현하였고 Service Layer, QueryDSL을 사용한 Repository Layer가 문서화되었습니다.

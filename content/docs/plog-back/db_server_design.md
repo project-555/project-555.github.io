@@ -7,8 +7,9 @@ prev: docs/plog-back/
 ---
 ![image](./asset/images/db_server_design-1700929316381.png)
 
-Plog에서는 데이터 베이스로 Postgres를 사용한다고 [이전 포스팅](/docs/plog-back/postgres)에서 작성했었습니다. 
-메인 DB로 결정할 때 결정도 많이 했지만, 실제 Server와 원활히 연결하기 위해서도 많은 노력을 했었어야 했는데요.
+Plog에서는 데이터 베이스로 Postgres를 사용하게 되었던 부분에 대해 [해당 포스팅](/docs/plog-back/postgres)에서 문서화를 진행했었는데요.
+
+사실 메인 DB로 결정할 때 결정도 많이 했지만, 실제 Server와 원활히 연결하기 위해서도 많은 노력을 했었어야 했습니다.
 
 이번 포스팅에선 Plog Backend Server 에서 어떻게 DB와 연결했는지, 구성에 대해 살펴보고자 합니다.
 
