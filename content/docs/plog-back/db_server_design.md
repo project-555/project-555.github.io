@@ -7,18 +7,18 @@ prev: docs/plog-back/
 ---
 ![image](./asset/images/db_server_design-1700929316381.png)
 
-Plog에서는 데이터 베이스로 Postgres를 사용하게 되었던 부분에 대해 [해당 포스팅](/docs/plog-back/postgres)에서 문서화를 진행했었는데요.
+Plog에서는 데이터 베이스로 Postgres를 사용하게 되었던 부분에 대해 [해당 포스팅](/docs/plog-back/postgres)에서 문서화를 진행했었습니다.
 
 사실 메인 DB로 결정할 때 결정도 많이 했지만, 실제 Server와 원활히 연결하기 위해서도 많은 노력을 했었어야 했습니다.
 
 이번 포스팅에선 Plog Backend Server 에서 어떻게 DB와 연결했는지, 구성에 대해 살펴보고자 합니다.
 
 # Private Subnet에 DB를 두기로 결정한 이유
-먼저 네트워크에 대해 고민했었습니다. AWS와 같은 Cloud 환경에서는 VPC를 통해 네트워크를 구성할 수 있는데요.
+먼저 네트워크에 대해 고민했었습니다. AWS와 같은 Cloud 환경에서는 VPC를 통해 네트워크를 구성할 수 있습니다.
 
 서버, DB 모두 public 영역에 두어도 되지만, 보안적인 측면에서는 Public, Private 영역을 나누어 구성하는 것이 좋을 것 같다고 판단하였습니다.
 
-특히 DB와 같은 민감한 정보를 담고 있는 경우는 Public으로 오픈하기보단 Private 영역에 격리하는 것이 좋다고 생각했는데요. 이유는 아래와 같습니다. 
+특히 DB와 같은 민감한 정보를 담고 있는 경우는 Public으로 오픈하기보단 Private 영역에 격리하는 것이 좋다고 생각했습니다. 이유는 아래와 같습니다. 
 1. Public 영역에 두게 되면, 외부에서 접근할 수 있는 포트를 열어야 합니다. 포트를 열게되면, 인증 수단은 키나 비밀번호로 마지막 인증수단만 남기에, 보안적으로 취약합니다.
 2. 특정 서버에서만 연결해야하는 경우, Public 영역에 두게되면, 해당 서버에서만 접근할 수 있도록 보안 그룹을 설정해야합니다. 이는 서버가 많아질수록 관리가 어려워집니다.
 3. 일반적으로 Private 영역의 경우 식별 가능한 클라이언트만 존재하기 때문에, Public 영역에 두는 것보다 보안적으로 안전합니다.
@@ -30,7 +30,7 @@ Plog에서는 데이터 베이스로 Postgres를 사용하게 되었던 부분�
 ## 왜 서버는? 
 처음에는 서버 역시 Private에 두고 Load Balancer를 Public 영역에 두어서 서버에 접근하도록 구성하였습니다.
 
-그러나 그러면 Private에 접근하기 위한 Endpoint가 필요한데요.
+그러나 그러면 Private에 접근하기 위한 Endpoint가 필요합니다.
 
 기초에는 VPC Endpoint라는 것을 사용했는데, 하루에 비용이 2~3달러 정도 발생하였습니다. 사실 그리 큰 비용은 아니지만, 공부를 위한 프로젝트이고 비용을 줄이기 위해 다른 방법을 찾아보았습니다.
 
@@ -81,7 +81,7 @@ spring:
 localhost로 접속하도록 되어 있어 혼동스러울 수는 있으나 SSH Tunneling이 수행되고 있기 때문에 5433포트로 가는 요청은 Bastion 서버를 통해 Private 영역의 DB로 전달됩니다.
 
 ### 주의할 점
-Spring 서버를 구동하기 전 SSH Tunneling을 수행해야 합니다. 하지 않을 경우 아래와 같은 메시지를 만나게 되는데요
+Spring 서버를 구동하기 전 SSH Tunneling을 수행해야 합니다. 하지 않을 경우 아래와 같은 메시지를 만나게 되니다.
 ```
 org.postgresql.util.PSQLException: Connection to localhost:5433 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
 ```
@@ -113,8 +113,8 @@ SSH Tunneling을 수행할 경우 정상적으로 로컬 서버가 구동됨을 
 # ...
 ```
 
-### EC2에서 사용하는 Spring Boot Application 설정
-EC2에서 사용하는 Spring Boot Application은 다음과 같이 설정해야 합니다.
+### ECS에서 사용하는 Spring Boot Application 설정
+ECS에서 사용하는 Spring Boot Application은 다음과 같이 설정해야 합니다.
 
 ```yaml {filename="/src/main/resources/application.yaml"}
 spring:
@@ -125,7 +125,7 @@ spring:
     password: {DB Password}
 ```
 
-이미 EC2는 Public, Private 영역에 속해있으므로 Bastion 서버를 통해 접속할 필요가 없습니다.
+이미 ECS는 Public, Private 영역에 속해있으므로 Bastion 서버를 통해 접속할 필요가 없습니다.
 
 따라서 RDS의 Endpoint로 접속하도록 설정하면 됩니다.
 
@@ -134,6 +134,6 @@ spring:
 # 마치며
 이번 포스팅에서는 Plog의 DB와 서버의 연결 구성에 대해 살펴보았습니다.
 
-Private에 ECS도 구성하지 못한 것이 아쉬움이 많이 남네요.
+Private에 ECS도 구성하지 못한 것이 아쉬움이 많이 남습니다.
 
 굳이 VCS Endpoint 말고도 NAT Instance를 EC2에 생성하여, Private 영역에 있는 서버가 외부와 통신할 수 있도록 구성할 수도 있었을 텐데, 추후 개선을 통해 해당 부분을 개선해보고 싶습니다.

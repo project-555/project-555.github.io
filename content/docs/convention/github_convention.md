@@ -39,13 +39,13 @@ Plog의 Branch 는 다음과 같은 형태로 작성하여야 합니다.
 
 ## Pull Request Convention
 
-### Foramt
-Pull Request의 Title은 다음 포멧에 맞추어 작성되어야 합니다. 
+### Format
+Pull Request 의 Title 은 다음 포멧에 맞추어 작성되어야 합니다. 
 ```
 [#{issue_number}] {title}
 ```
 
-Pull Request의 Description은 다음 포멧에 맞추어 작성되어야 합니다. 
+Pull Request 의 Description 은 다음 포멧에 맞추어 작성되어야 합니다. 
 ```md
 # 세부 구현
 - 한 일 1
@@ -69,6 +69,6 @@ Pull Request의 Description은 다음 포멧에 맞추어 작성되어야 합니
 |`Request Change`| 코드를 수정하는 것을 강력히 권고함. _(수정 강제, Merge 불가)_                                                           |
 
 ## Merge Strategy
-- Pull Request를 통해 `Approve` 수가 **1개 이상**인 경우에 허용합니다. (게시 경과 1일 이후는 예외)
+- Pull Request 를 통해 `Approve` 수가 **1개 이상**인 경우에 허용합니다. (게시 경과 1일 이후는 예외)
 - 커밋이 많은 경우 `Squash`, 커밋이 별로 없고, 각 커밋이 의미를 담고 있는 경우 `Rebase`를 기본 전략으로 합니다.
-- Target Branch는 `main` 으로 설정합니다.
+- Target Branch 는 `main` 으로 설정합니다.
