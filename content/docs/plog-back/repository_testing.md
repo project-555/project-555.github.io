@@ -32,7 +32,7 @@ Service에서 사용되는 모든 메서드는 `JUnit`을 사용하여 테스트
 
 최초에는 `Docker`를 사용하여 테스트용 DB를 별도로 구축하려고 했지만, `Testcontainers`는 `Docker Container`를 사용하면서도 docker-compose.yaml과 같은 파일을 작성하지 않더라도 테스트 환경을 구성할 수 있다는 장점이 있어 `Testcontainers`를 사용하기로 결정하였습니다.
 
-![testcontainers](./asset/images/testing_testcontainers.png)
+![testcontainers](./asset/images/repository_testing_testcontainers.png)
 
 ## TestDB 구축의 어려웠던 점
 
@@ -107,9 +107,7 @@ alter sequence plog_blog.blog_info_id_seq owned by plog_blog.blog.id;
 
 처음에 이런 부분을 제대로 신경쓰지 못하여서 TestDB를 만드는데 꽤나 많은 고생을 했습니다.
 
-
-
-## Test 구축의 어려웠던 점
+## Spring에서 Test 환경을 구축하기 어려웠던 점
 
 TestDB 구축에 필요한 DDL을 모두 작성하였다면 이를 실제 테스트에서 사용할 수 있도록 저희가 사용하는 `PostgreSQL`의 컨테이너를 설치하고, 작성한 sql을 실행하도록 해야했습니다.
 
@@ -151,7 +149,7 @@ public class BaseRepositorySupportTest {
 
 이렇게 DB 컨테이너를 새로 띄우고, 테이블을 생성한 뒤에야 본격적으로 test코드를 작성할 수 있었습니다.
 
-## Test 코드 구현의 어려웠던 점
+## Test 코드를 실행하기까지 어려웠던 점
 
 test 코드 구현은 조금 쉽다고 생각해서였는지 여기서도 결국 어려움을 겪었습니다.
 
@@ -181,7 +179,11 @@ public class VPostingRepositorySupportTest extends BaseRepositorySupportTest {
 
 이런 세팅까지 모두 마쳐주고 난 뒤에야 비로소 데이터를 세팅하고 `Querydsl`이 정상동작하는지 확인해볼 수 있었습니다.
 
+## 테스트 실행 결과
 
+이렇게 완성된 Test 코드를 실행해보니 다음과 같이 성공적으로 repository test를 마칠 수 있었습니다.  
+
+![repository_test_result](./asset/images/repository_testing_result.png)
 
 ## 배운 점과 아쉬웠던 점
 
