@@ -11,7 +11,7 @@ weight: 3
 해당 부분은 Plog의 프론트엔드를 구성하는 각 요소 및 개발에 대한 내용을 담고 있습니다.
 
 ## Stacks
-프론트엔드 개발에 사용한 기술 및 라이브러리는 아래와 같습니다. 만약 기술의 도입 근거에 대해 좀 더 자세히 알고 싶다면 ["_Plog의 프론트엔드 기술 도입 이유 읽어보기_"](/docs/plog-front/frontend_tech_stack/) 문서를 참고 부탁드립니다.
+프론트엔드 개발에 사용한 기술 및 라이브러리는 아래와 같습니다.
 
 #### Environments
 <img src="https://img.shields.io/badge/webstorm-000000?style=for-the-badge&logo=webstorm&logoColor=white" style="display:inline;">
@@ -31,6 +31,10 @@ weight: 3
 <img src="https://img.shields.io/badge/awsamplify-FF9900?style=for-the-badge&logo=awsamplify&logoColor=white" style="display:inline;">
 
 
+만약 기술의 도입 근거에 대해 좀 더 자세히 알고 싶다면 아래 문서를 참고 부탁드립니다.
+- ["Plog의 프론트엔드는 왜 ReactTS로 개발했을까?"](/docs/plog-front/frontend_tech_stack/)
+- ["Plog에서 사용한 UI 라이브러리와 그 라이브러리를 선택한 이유"](/docs/plog-front/frontend_tech_stack_ui/)
+- ["Plog의 프론트엔드 배포 수단으로 AWS Amplify를 선택한 이유"](/docs/plog-front/frontend_tech_stack_deploy/)
 
 <br/>
 <br/>
@@ -93,3 +97,4 @@ plog의 블로그 페이지를 구현하며 가장 신경썼던 기능을 소개
 - 블로그 홈에 작성된 모든 게시글을 로딩하지 않고 사용자가 페이지를 스크롤 할 때마다 추가적으로 불러옵니다.
 - 스크롤 위치를 감시하여 블로그 게시글을 15개씩 추가 로딩합니다.
 - 따라서 초기 로딩속도를 빠르게 유지 할 수 있으며, 사용자는 데이터를 기다릴 필요 없이 게시글을 조회할 수 있습니다. 
+- ["_plog에서 무한스크롤을 구현한 방법_"](/docs/plog-front/frontend_infinityscroll/)문서에서 자세한 설명을 확인할 수 있습니다. 
