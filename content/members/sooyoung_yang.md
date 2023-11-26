@@ -29,8 +29,10 @@ type: about
 - 마이페이지 및 관련 컴포넌트를 구현하였습니다.
 - 유저 블로그 포스팅 수정 페이지를 구현하였습니다.
 
+
 #### 문서화 파트
 - [_"Plog의 뼈대, Layered Architecture"_](/docs/plog-back/layered_architecture/) 문서를 작성하였습니다.
+- [_"Plog가 로깅을 시작한 이유"_](/docs/plog-back/observability/) 문서를 작성하였습니다.
 - [_"Project-555가 PostgreSQL를 사용하게 된 사연"_](/docs/plog-back/postgres/) 문서를 작성하였습니다.
 - [_"Plog의 Repository Test 도입을 위한 힘겨운 여정"_](/docs/plog-back/repository_testing/) 문서를 작성하였습니다.
 - [_"Plog의 Service Test에 도달하기 위한 한 발자국"_](/docs/plog-back/service_testing/) 문서를 작성하였습니다.
