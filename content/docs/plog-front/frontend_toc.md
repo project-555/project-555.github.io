@@ -4,6 +4,7 @@ date: 2023-11-12T16:26:48+09:00
 type: docs
 toc: true
 prev: docs/plog-front/frontend_darkmode
+next: docs/plog-front/frontend_infinityscroll
 ---
 
 
@@ -17,33 +18,6 @@ prev: docs/plog-front/frontend_darkmode
 #### Plog에서 구현한 TOC 화면
 ![image](./asset/frontend_toc_main.png)
 Plog 역시 `개발자들을 위한 블로그 서비스`라는 점에서 TOC 기능은 필수라고 생각하였습니다.
-
-
-[//]: # (## TOC 구현하는 방법)
-
-[//]: # (ToC 기능을 구현하기 위해서는 라이브러리를 사용하거나 Intersection Observer API를 사용하는 방법이 일반적인 것 같습니다. )
-
-[//]: # (기술 구현을 위해 조사한 내용은 아래 세가지 방법으로 요약할 수 있었습니다. )
-
-[//]: # ()
-[//]: # (#### 1. Intersection Observer API를 사용한다.)
-
-[//]: # (`Intersection Observer`는 특정 요소에 observer&#40;관측자&#41;를 생성하여 교차점을 관측할 수 있게 해주는 Web API 입니다.)
-
-[//]: # (따라서 클라이언트의 뷰포트에 따라 다양한 동작을 넣을 수 있습니다. )
-
-[//]: # ()
-[//]: # (#### 2. Scroll event)
-
-[//]: # ()
-[//]: # (1. DB에 저장된 string 형태의  html 태그들 중 h1~h3 태그만 선택합니다.)
-
-[//]: # (2. 선택된 h태그들은 목차가 됩니다.)
-
-[//]: # (3. 목차를 클릭하면 해당 내용이 있는 곳으로 스크롤을 이동할 수 있습니다.)
-
-[//]: # (4. 포스팅을 스크롤 하며 내리다가 h태그를 만나면 해당 목차를 강조합니다.)
-
 
 
 ## TOC 기본 기능 정의 
@@ -213,7 +187,7 @@ Plog에서는
 을 근거로 Intersection Observer API가 아닌 `스크롤 이벤트`를 통해 구현하기로 했습니다. 
 
 
-#### 4.1 스크롤 이벤트 생성 및 등록
+##### 4.1 스크롤 이벤트 생성 및 등록
 
 ```js
  useEffect(() => {
@@ -266,7 +240,7 @@ export default function useScrollPosition() {
 ```
 
 
-#### 4.2 위치 값에 따라 화면에 위치한 heading id값 구하기
+##### 4.2 위치 값에 따라 화면에 위치한 heading id값 구하기
 `activeItemId`: TOC 목록 중 강조 표시할 태그를 찾기 위한 함수입니다.  
 `targetOffsets`: 추출한 h1~h3 태그들의 offsetTop 값을 구하기 위한 배열입니다.  
 `lastIndex`: targetOffsets 에서 현재 위치보다 큰 index 찾습니다.  
