@@ -3,9 +3,9 @@ title: Members
 type: about
 ---
 
-## Taeyoung Yang
+## Sooyoung Yang
 
-![image](../asset/images/sooyoung_yang_profile.jpg)  
+![image](/asset/images/sooyoung_yang_profile.jpg)  
 현직 3년차 AI 및 백엔드 엔지니어로 주식회사 투디지트에서 재직 중입니다.
 
 ### About Me
